@@ -32,5 +32,5 @@ jobs:
             rm -rf $REMOTE_DIR
             mkdir $REMOTE_DIR
             cd $REMOTE_DIR
-            git clone ${{ github.server_url }}/${{ github.repository }}" .
+            git clone ${{ github.server_url }}/${{ github.repository }} .
             docker compose up -d

@@ -32,5 +32,5 @@ jobs:
             rm -rf $REMOTE_DIR
             mkdir $REMOTE_DIR
             cd $REMOTE_DIR
-            git pull
+            git clone ${{ github.repository }} .
             docker compose up -d

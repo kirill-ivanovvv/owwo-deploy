@@ -29,6 +29,8 @@ jobs:
           script_stop: true
           envs: REMOTE_DIR,DOCKER_COMPOSE_NAME,REPOSITORY_OWNER,REPOSITORY,TOKEN
           script: |
+            rm -rf $REMOTE_DIR
+            mkdir $REMOTE_DIR
             cd $REMOTE_DIR
             git pull
             docker compose up -d
